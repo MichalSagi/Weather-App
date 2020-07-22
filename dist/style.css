@@ -1,0 +1,133 @@
+* {
+  font-family: "Indie Flower", cursive;
+}
+
+#header {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+#container {
+  min-height: 100vh;
+}
+
+#primaryWeather-data {
+    background-color: rgb(55, 147, 146);
+    min-height: 30vh;
+}
+
+#btnSearch {
+    width: 40px;
+    height: 36px;
+    border: 1px solid rgb(66, 75, 84);
+    text-align: center;
+    color: rgb(55, 147, 146);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+    justify-content: center;
+ 
+}
+
+span {
+    font-size: 0.5em;
+    justify-content: baseline;
+}
+
+.fas fa-search-location {
+  color: rgb(66, 75, 84);
+  size: 8;
+}
+
+input {
+  width: 100%;
+  border:1px solid rgb(66, 75, 84);
+  border-right: none;
+  padding: 7px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  /* color: rgb(19, 138, 54); */
+  font-family: "Indie Flower", cursive;
+}
+
+#primaryWeather-data {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+#primeryContainer {
+    /* background-color:rgb(100, 248, 246, 0);  */
+    display: grid;
+    border-radius: 1px;
+grid-template-areas: 
+"n n"
+"t t"
+"c i"
+". b";
+}
+
+.name.first {
+    grid-area: n;
+    font-size: 2em;
+    font-weight: 800;
+    justify-self: center;
+}
+
+.temp.first {
+    grid-area: t;
+    font-size: 3em;
+    font-weight: 600;
+    justify-self: center;
+}
+
+.condition.first {
+    grid-area: c;
+    align-self: center;
+}
+
+img {
+    grid-area: i;
+    justify-self: center
+}
+
+.btnSave.first {
+grid-area: b;
+background-color: inherit;
+border-radius: 5px;
+
+}
+
+.cityView {
+display: grid;
+grid-template-columns: 1fr;
+background-color:rgb(199, 204, 219, 0.3) ;
+border: 1px solid  rgb(55, 147, 146);
+border-radius: 1em;
+margin-top: 15px;
+}
+
+.name {
+    font-size: 1.5em;
+    justify-content: start;
+    font-weight: 600;
+    justify-self: center;
+}
+.temp {
+    font-size: 1.5em;
+    justify-content: start;
+    font-weight: 600;
+}
+
+.none {
+   display: none;
+}
+
+.btnSave {
+    grid-area: b;
+    background-color: inherit;
+    border-radius: 2px;
+    margin: 0 20px 0 20px;
+} 

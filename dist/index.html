@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <script
+      src="https://kit.fontawesome.com/1c23002fb0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <input type="text" placeholder="choose city" />
+      <button id="btnSearch"><i class="fas fa-search-location"></i></button>
+    </div>
+    <div id="container">
+      <div id="primaryWeather-data"></div>
+      <div id="weather-data"></div>
+    </div>
+
+    <script id="primaryWeather-template" type="text/x-handlebars-template">
+      <div id="primeryContainer">
+      <div class="name first">{{name}}</div>
+      <div class='temp first'>{{temperature}} <span>°C</span></div>
+      <div class="condition first">{{condition}}</div>
+      <img src="http://openweathermap.org/img/wn/{{conditionPic}}@2x.png">
+      <button class="btnSave first {{#if isSaved}}fas fa-eraser{{else}}fa fa-plus{{/if}}"></button>
+      </div>
+    </script>
+    <script id="weather-template" type="text/x-handlebars-template">
+      {{#each this}}
+        <div class='cityView'>
+          <div class="name">{{name}}</div>
+          <div class='temp'>{{temperature}} &#x2103</div>
+          <div class="condition none">{{condition}}</div>
+          <img class='none' src="http://openweathermap.org/img/wn/{{conditionPic}}@2x.png">
+          <button class="btnSave {{#if isSaved}}fas fa-eraser{{else}}fa fa-plus{{/if}}"></button>
+        </div>
+      {{/each}}
+    </script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="model.js"></script>
+    <script src="renderer.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

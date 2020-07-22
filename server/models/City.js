@@ -5,7 +5,8 @@ const weatherSchema = new Schema({
   name: String,
   temperature: Number,
   condition: String,
-  conditionPic: String
+  conditionPic: String,
+  isSaved: Boolean
 });
 
 const Weather = mongoose.model("weather", weatherSchema);
